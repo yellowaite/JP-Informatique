@@ -18,8 +18,7 @@ header {
     align-items: center;
     background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);    
     top: 0;
     z-index: 1000;
 }
@@ -501,4 +500,5 @@ ul.no-bullets li {
     align-items: center;
     gap: 10px;
     padding: 8px 0;
+
 }
