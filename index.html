@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP-Informatique - Services Informatiques Résidentiels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJxv3sQ6G5A1l6PVv9lL5tB62JEz5WaFcbhxaGxtKzXt9SzjFf0y9d8t4HDp" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="JP-Informatique Logo" class="header-logo">
+        </a>
+        <div class="header-center">
+            <h1>JP-Informatique</h1>
+            <p>Services Informatiques Résidentiels</p>
+        </div>
+        <div class="header-info">
+            <p><i class="fas fa-phone"></i> 450-123-4567</p>
+            <a href="#contact" class="header-btn">Contactez-nous</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#services"><i class="fas fa-cogs"></i> Nos Services</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="container-fluid">
+            <h1><i class="fas fa-laptop-code"></i> JP-Informatique</h1>
+            <p>Votre partenaire de confiance pour tous vos besoins informatiques résidentiels</p>
+            <a href="#services" class="hero-btn"><i class="fas fa-arrow-down"></i> Découvrir nos services</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 id="services" class="service-header">
+            <i class="fas fa-handshake service-icon"></i>Nos Services
+        </h2>
+        <p class="service-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <u>Nous desservons les régions de Granby, Bromont, Waterloo et leurs environs.</u>
+        </p>
+        <div class="service-grid">
+            <a href="installation-config.html" class="service-item">
+                <i class="fas fa-desktop service-icon"></i>
+                <h3>Installation et Configuration</h3>
+                <p>Installation et configuration de PC, Mac et objets connectés comme les imprimantes et caméras.</p>
+            </a>
+            <a href="support-depannage.html" class="service-item">
+                <i class="fas fa-tools service-icon"></i>
+                <h3>Support et Dépannage</h3>
+                <p>Assistance personnalisée pour résoudre vos problèmes informatiques rapidement.</p>
+            </a>
+            <a href="reseaux-securite.html" class="service-item">
+                <i class="fas fa-network-wired service-icon"></i>
+                <h3>Réseaux et Sécurité</h3>
+                <p>Optimisation, sécurisation et gestion de votre réseau domestique.</p>
+            </a>
+            <a href="sauvegarde-recuperation.html" class="service-item">
+                <i class="fas fa-save service-icon"></i>
+                <h3>Sauvegarde & Récupération</h3>
+                <p>Solutions de sauvegarde de données et récupération de fichiers perdus pour une sécurité maximale.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <h2 id="contact" class="service-header">
+            <i class="fas fa-envelope service-icon"></i> Contactez-nous
+        </h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <form action="https://formspree.io/f/xrblowla" method="POST" id="contact-form">
+                    <input name="_formsubmit_id" type="text" style="display:none">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><i class="fas fa-user"></i> Nom complet *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Adresse courriel *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label"><i class="fas fa-phone"></i> Téléphone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" maxlength="12"
+                            placeholder="450-123-4567">
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label"><i class="fas fa-cogs"></i> Service souhaité</label>
+                        <select class="form-control" id="service" name="service">
+                            <option value="">Sélectionnez un service</option>
+                            <option value="Installation et Configuration">Installation et Configuration</option>
+                            <option value="Support et Dépannage">Support et Dépannage</option>
+                            <option value="Réseaux et Sécurité">Réseaux et Sécurité</option>
+                            <option value="Sauvegarde & Récupération">Sauvegarde & Récupération</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label"><i class="fas fa-comment"></i> Message *</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"
+                            placeholder="Décrivez votre besoin ou votre problème..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+                    </div>
+                    <div id="form-message" style="margin-top: 1rem; display: none; color: green; font-weight: 600;">
+                        <i class="fas fa-check-circle"></i> Message envoyé. Merci
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton scroll to top -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2025 JP-Informatique Solutions - Tous droits réservés.</p>
+        <p><i class="fas fa-phone"></i> 450-123-4567 | <i class="fas fa-envelope"></i> info@jp-informatique.com</p>
+    </footer>
+
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form validation
+        // Form validation + envoi via Formspree + message de confirmation
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!name || !email || !message) {
+                e.preventDefault();
+                alert('Veuillez remplir tous les champs obligatoires (*)');
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Veuillez entrer une adresse courriel valide');
+                return false;
+            }
+
+            // Empêche l'envoi classique
+            e.preventDefault();
+
+            // Envoie via fetch à Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('form-message').style.display = 'block';
+                    this.reset();
+                } else {
+                    alert('Une erreur est survenue. Veuillez réessayer.');
+                }
+            }).catch(error => {
+                alert('Erreur réseau. Veuillez vérifier votre connexion.');
+            });
+        });
+        // Formatage automatique du champ téléphone
+        document.getElementById('phone').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // Supprime tout sauf les chiffres
+
+            if (value.length > 3 && value.length <= 6) {
+                value = value.slice(0, 3) + '-' + value.slice(3);
+            } else if (value.length > 6) {
+                value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+            }
+
+            e.target.value = value;
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP-Informatique - Support et Dépannage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJxv3sQ6G5A1l6PVv9lL5tB62JEz5WaFcbhxaGxtKzXt9SzjFf0y9d8t4HDp" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="JP-Informatique Logo" class="header-logo">
+        </a>
+        <div class="header-center">
+            <h1>JP-Informatique</h1>
+            <p>Services Informatiques Résidentiels</p>
+        </div>
+        <div class="header-info">
+            <p><i class="fas fa-phone"></i> 450-123-4567</p>
+            <a href="#contact" class="header-btn">Contactez-nous</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html#services"><i class="fas fa-cogs"></i> Nos Services</a>
+        <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Retour aux services</a>
+        
+        <h2 class="service-header">
+            <i class="fas fa-tools service-icon"></i> Support et Dépannage
+        </h2>
+        <p class="service-location">
+            <i class="fas fa-map-marker-alt"></i> 
+            <u>Services résidentiels dans les régions de Granby, Bromont, Waterloo et environs.</u>
+        </p>
+
+        <div class="service-details">
+            <h3><i class="fas fa-user-cog"></i> Assistance Technique</h3>
+            <p>Problèmes de lenteur, écrans bleus ou logiciels qui plantent ? Nous offrons un support personnalisé à
+                domicile ou à distance pour diagnostiquer et résoudre vos soucis informatiques rapidement. Notre
+                équipe experte vous accompagne pour retrouver un système stable et performant.</p>
+
+            <h3><i class="fas fa-wrench"></i> Résolution de Pannes</h3>
+            <p>Que ce soit un ordinateur qui ne démarre plus, une imprimante qui refuse de fonctionner ou une connexion
+                Wi-Fi instable, nous intervenons pour remettre vos appareils en marche. Diagnostic complet, réparation
+                et tests de fonctionnement pour assurer une solution durable.</p>
+
+            <h3><i class="fas fa-lightbulb"></i> Conseils Personnalisés</h3>
+            <p>Besoin d'aide pour utiliser un logiciel ou configurer un appareil ? Nous vous guidons étape par étape
+                pour que vous maîtrisiez votre technologie au quotidien. Formation adaptée à votre niveau et
+                documentation personnalisée fournie.</p>
+
+            <h3><i class="fas fa-shield-alt"></i> Maintenance Préventive</h3>
+            <p>Pour éviter les problèmes avant qu'ils surviennent, nous proposons un service de maintenance préventive :
+                nettoyage du système, mise à jour des logiciels, optimisation des performances et conseils d'utilisation
+                pour prolonger la durée de vie de vos équipements.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 JP-Informatique Solutions - Tous droits réservés.</p>
+        <p><i class="fas fa-phone"></i> 450-123-4567 | <i class="fas fa-envelope"></i> info@jp-informatique.com</p>
+    </footer>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-details h3, .service-details p').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+
+</html>
